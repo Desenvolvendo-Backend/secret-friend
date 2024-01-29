@@ -9,10 +9,9 @@ POST {{baseUrl}}/admin/login
 Content-Type: application/json
 
 {
-    "password": "27012024"
+    "password": "29012024"
     
 }
-
 
 ###
 @token = {{login.response.body.token}}
@@ -54,3 +53,10 @@ Authorization: Bearer {{token}}
     "description": "Comemorar 4 anos de namoro",
     "grouped": true
 }
+
+###
+DELETE  {{baseUrl}}/admin/events/3 
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
