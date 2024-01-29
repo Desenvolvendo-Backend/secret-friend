@@ -15,3 +15,8 @@ Content-Type: application/json
 GET {{baseUrl}}/admin/events/1/groups
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/admin/events/1/groups/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
