@@ -22,5 +22,7 @@ router.delete("/events/:id", auth.validade, events.deleteEvent)
 router.get("/events/:id_event/groups", auth.validade, groups.getAll)
 router.get("/events/:id_event/groups/:id", auth.validade, groups.getGroup)
 router.post("/events/:id_event/groups", auth.validade, groups.addGroup)
+router.put("/events/:id_event/groups/:id", auth.validade, groups.updateGroups)
+router.delete("/events/:id_event/groups/:id", auth.validade, groups.deleteGroup)
 
 export default router;

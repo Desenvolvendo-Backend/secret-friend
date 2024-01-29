@@ -29,3 +29,17 @@ Authorization: Bearer {{token}}
 {
     "name": "Group teste"
 }
+
+### Update group
+PUT {{baseUrl}}/admin/events/1/groups/4
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Testando o update"
+}
+
+### Deletar grupo do evento
+DELETE {{baseUrl}}/admin/events/1/groups/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
