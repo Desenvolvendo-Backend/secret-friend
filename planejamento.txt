@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=mKa1MuB1HMk
+
+PLANEJAMENTO BANCO DE DADOS
+
+- EVENTOS
+- GRUPOS
+- PESSOAS
+
+events
+- id INT PK AUTO_INCREMENT
+- status BOLLEAN default=false
+- title STRING
+- description STRING
+- grouped BOOLEAN default=false
+
+eventGroups
+- id INT PK AUTO_INCREMENT
+- id_event INT (RELACIONADO a events.id)
+- name STRING
+
+eventPeople
+- id INT PK AUTO_INCREMENT
+- id_event INT (RELACIONADO a events.id)
+- id_group INT (RELACIONADO a eventGroups.id)
+- name STRING
+- cpf STRING
+- matched STRING default=""

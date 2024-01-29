@@ -1,0 +1,56 @@
+### variavel com o endereço
+@baseUrl = http://localhost:3000
+# 
+GET {{baseUrl}}/ping 
+
+### Faz o login
+# @name login
+POST {{baseUrl}}/admin/login 
+Content-Type: application/json
+
+{
+    "password": "27012024"
+    
+}
+
+
+###
+@token = {{login.response.body.token}}
+
+GET {{baseUrl}}/admin/ping
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Pegar todos os evendos
+GET {{baseUrl}}/admin/events
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Pegar um evento
+GET {{baseUrl}}/admin/events/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+# @name AddEvent
+POST {{baseUrl}}/admin/events 
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "Festa do pijama",
+    "description": "Aniversário dos meninos",
+    "grouped": true
+}
+
+###
+PUT {{baseUrl}}/admin/events/3 
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "status": false,
+    "title": "Passeio de barco",
+    "description": "Comemorar 4 anos de namoro",
+    "grouped": true
+}
