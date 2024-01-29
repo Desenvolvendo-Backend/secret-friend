@@ -10,13 +10,22 @@ Content-Type: application/json
     
 }
 
-###
+### Pegar todos os grupos de um evento
 @token = {{login.response.body.token}}
 GET {{baseUrl}}/admin/events/1/groups
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
-###
-GET {{baseUrl}}/admin/events/1/groups/1
+### Pegar um grupo de um evento
+GET {{baseUrl}}/admin/events/1/groups/2
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
+### Criar um grupo em um evento
+POST {{baseUrl}}/admin/events/1/groups
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Group teste"
+}
