@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:3000
+
+### Faz o login
+# @name login
+POST {{baseUrl}}/admin/login 
+Content-Type: application/json
+
+{
+    "password": "29012024"
+    
+}
+
+### Lista de pessoas
+@token = {{login.response.body.token}}
+GET {{baseUrl}}/admin/events/1/groups/1/people
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Pegar uma pessoa
+GET {{baseUrl}}/admin/events/1/groups/1/people/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Criar um pessoa
+POST {{baseUrl}}/admin/events/1/groups/1/people/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Testando agora",
+    "cpf": "123.456.789-99"
+}
+
+### Update
+PUT {{baseUrl}}/admin/events/1/groups/1/people/2
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Deu crash",
+    "cpf": "123.456.789-50"
+}
+
+### Deletar
+DELETE {{baseUrl}}/admin/events/1/groups/1/people/4
+Content-Type: application/json
+Authorization: Bearer {{token}}
