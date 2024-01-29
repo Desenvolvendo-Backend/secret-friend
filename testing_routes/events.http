@@ -58,3 +58,5 @@ Authorization: Bearer {{token}}
 DELETE  {{baseUrl}}/admin/events/3 
 Content-Type: application/json
 Authorization: Bearer {{token}}
+
+

@@ -1,6 +1,7 @@
 import { Router } from "express";
 import * as auth from "../controllers/auth";
 import * as events from "../controllers/events";
+import * as groups from "../controllers/groups";
 
 const router = Router();
 
@@ -15,5 +16,7 @@ router.get("/events/:id", auth.validade, events.getEvent);
 router.post("/events", auth.validade, events.addEvent);
 router.put("/events/:id", auth.validade, events.updateEvent);
 router.delete("/events/:id", auth.validade, events.deleteEvent)
+
+router.get("/events/:id_event/groups", auth.validade, groups.getAll)
 
 export default router;
