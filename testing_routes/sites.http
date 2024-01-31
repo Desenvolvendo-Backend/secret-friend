@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/events/2
+
+###
+GET {{baseUrl}}/events/2/search?cpf=12345678999
