@@ -6,13 +6,13 @@ POST {{baseUrl}}/admin/login
 Content-Type: application/json
 
 {
-    "password": "29012024"
+    "password": "31012024"
     
 }
 
 ### Lista de pessoas
 @token = {{login.response.body.token}}
-GET {{baseUrl}}/admin/events/1/groups/1/people
+GET {{baseUrl}}/admin/events/2/groups/2/people
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -22,17 +22,17 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 ### Criar um pessoa
-POST {{baseUrl}}/admin/events/1/groups/1/people/
+POST {{baseUrl}}/admin/events/2/groups/6/people/
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Testando agora",
+    "name": "Gabriela",
     "cpf": "123.456.789-99"
 }
 
 ### Update
-PUT {{baseUrl}}/admin/events/1/groups/1/people/2
+PUT {{baseUrl}}/admin/events/2/groups/2/people/9
 Content-Type: application/json
 Authorization: Bearer {{token}}
 

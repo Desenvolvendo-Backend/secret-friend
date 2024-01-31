@@ -9,7 +9,7 @@ POST {{baseUrl}}/admin/login
 Content-Type: application/json
 
 {
-    "password": "29012024"
+    "password": "31012024"
     
 }
 
@@ -26,7 +26,7 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 ### Pegar um evento
-GET {{baseUrl}}/admin/events/1
+GET {{baseUrl}}/admin/events/2
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -43,15 +43,12 @@ Authorization: Bearer {{token}}
 }
 
 ###
-PUT {{baseUrl}}/admin/events/3 
+PUT {{baseUrl}}/admin/events/2 
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "status": false,
-    "title": "Passeio de barco",
-    "description": "Comemorar 4 anos de namoro",
-    "grouped": true
+    "status": true
 }
 
 ###

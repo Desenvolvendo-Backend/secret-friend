@@ -6,37 +6,37 @@ POST {{baseUrl}}/admin/login
 Content-Type: application/json
 
 {
-    "password": "29012024"
+    "password": "30012024"
     
 }
 
 ### Pegar todos os grupos de um evento
 @token = {{login.response.body.token}}
-GET {{baseUrl}}/admin/events/1/groups
+GET {{baseUrl}}/admin/events/2/groups
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 ### Pegar um grupo de um evento
-GET {{baseUrl}}/admin/events/1/groups/2
+GET {{baseUrl}}/admin/events/2/groups/2
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 ### Criar um grupo em um evento
-POST {{baseUrl}}/admin/events/1/groups
+POST {{baseUrl}}/admin/events/2/groups
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Group teste"
+    "name": "Grupo C"
 }
 
 ### Update group
-PUT {{baseUrl}}/admin/events/1/groups/4
+PUT {{baseUrl}}/admin/events/2/groups/2
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Testando o update"
+    "name": "Grupo B"
 }
 
 ### Deletar grupo do evento
